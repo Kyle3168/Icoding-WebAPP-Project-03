@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        html,body {
+            margin: 0;
+        }
+
+        .box {
+            width: 750px;
+            height: 400px;
+            background-image: linear-gradient(to right, pink, skyblue);
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="box"></div>
+
+    <script>
+        // 假设把页面分成 10份
+        function initpage(){
+            // 获取当前页面的 html 元素
+
+            var html=document.documentElement;
+
+            // 获取页面的可视宽
+            var clientWidth = html.clientWidth;
+            console.log(clientWidth / 10 + "px")
+            html.style.fontSize = clientWidth / 10 + "px";
+            console.log(html.style.fontsize);
+        }
+        initpage();
+        window.onresize = initpage;
+
+    </script>
+
+
+    
+</body>
+</html>

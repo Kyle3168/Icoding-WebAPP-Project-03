@@ -1,0 +1,38 @@
+server {
+    listen       80;
+    server_name  47.88.50.207;
+    location / {
+        root   /workspace/projects;
+        index  index.html index.htm;
+    }
+}
+
+# 移动端项目：流体布局
+server {
+    listen 81;
+    server_name 47.88.50.207;
+	location / {
+      root /workspace/mobile-fluid;
+	  index index.html index.htm;
+    }
+}
+
+# 移动端项目：rem,vw 布局
+server {
+    listen 82;
+    server_name 47.88.50.207;
+	location / {
+      root /workspace/mobile-rem-vw;
+	  index index.html index.htm;
+    }
+}
+
+# pc
+server {
+    listen 83;
+    server_name 47.88.50.207;
+	location / {
+      root /workspace/pc;
+	  index index.html index.htm;
+    }
+}
